@@ -26,8 +26,9 @@
     border-radius: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding-left: 1.5%;
+    padding-right: 1.5%;
     overflow: hidden;
 }
 
@@ -35,6 +36,11 @@
 #val{
     font-size: 0.8rem;
  
+}
+
+#txtdiv{
+    width: 70%;
+    overflow: auto;
 }
 
 @media only screen and (max-width: 800px) {

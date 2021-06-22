@@ -2,9 +2,12 @@ function addtask() {
     var ediv = document.createElement("div");
     ediv.setAttribute("class","ediv")
     var div = document.getElementById("data");
+    var name = document.createElement("p")
+    name.setAttribute("id" , "txtdiv")
     var val = document.getElementById("val").value;
     var text = document.createTextNode(val)
-    ediv.appendChild(text)
+    name.appendChild(text);
+    ediv.appendChild(name)
     div.appendChild(ediv);
     document.getElementById("val").value = ""
 
