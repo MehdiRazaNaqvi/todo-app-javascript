@@ -50,9 +50,7 @@ function dlt(g) {
 
 }
 function edittxt(n) {
-    var oldv = n.parentNode.firstChild.nodeValue
-    
-
+    var oldv = n.parentNode.firstChild.firstChild.nodeValue
     console.log(oldv)
     var newv = prompt("Enter updated task" , oldv)
     console.log(newv)
