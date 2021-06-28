@@ -9,6 +9,19 @@ function addtask() {
     name.appendChild(text);
     ediv.appendChild(name)
     div.appendChild(ediv);
+    var key = Math.random()*10284;
+    key = key.toFixed();
+    console.log(key)
+    var obj = {
+        val : val,
+        key : key
+    }
+    console.log(obj)
+    firebase.database().ref("entry/" +key).set(obj);
+    firebase.database().ref("entry").on("child_added" , function(aya) {
+        console.log(aya.val())
+    })
+
     document.getElementById("val").value = ""
 
     //edit button
@@ -26,6 +39,7 @@ function addtask() {
 
 
 
+
     //delete button
     
     var button = document.createElement("button")
@@ -35,6 +49,7 @@ function addtask() {
     button.setAttribute("onclick","dlt(this)")
     button.setAttribute("id","dltbtn")
     button.setAttribute("class","btn btn-outline-dark")
+   
 
     
     
@@ -45,6 +60,7 @@ function dlt(g) {
     
     g.parentNode.remove()
     console.log(g.parentNode)
+    // firebase.database().ref("entry/" +key).remove()
     
 
 
@@ -61,13 +77,4 @@ function dltall() {
     document.getElementById("data").innerHTML = "";
 
 }
-
-
-
-
-
-
-
-
-
 
